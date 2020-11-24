@@ -21,9 +21,6 @@ int main(int argc, char * argv[]){
 
   int data_processed;
 
-  printf("CIAOOOOO");
-
-
 
   // Open FIFO in write mode
   fifo_fd = open(argv[1], O_WRONLY);      // Apre la fifo in write mode per permettere la scrittura del file
