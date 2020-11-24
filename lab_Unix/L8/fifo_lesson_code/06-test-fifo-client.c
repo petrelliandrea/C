@@ -14,6 +14,7 @@
 /* Creates a client that writes to a FIFO named argv[1] the message
    argv[2] plus other client info */
 int main(int argc, char * argv[]){
+
   int fifo_fd, str_len;
   char my_msg[BUF_SIZE];
   ssize_t num_bytes;
@@ -21,8 +22,8 @@ int main(int argc, char * argv[]){
   int data_processed;
 
   // Open FIFO in write mode
-  fifo_fd = open(argv[1], O_WRONLY);
-
+  fifo_fd = open(argv[1], O_WRONLY);      // Apre la fifo in write mode per permettere la scrittura del file
+  
   // Assemble the message
   str_len = sprintf(my_msg,"%s:PID=%d: \"%s\"\n", __FILE__, getpid(), argv[2]);
 

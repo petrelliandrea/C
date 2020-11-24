@@ -42,7 +42,6 @@ int main(int argc, char * argv[])
     close(fifo_fd);
   }
 
-
   /*
   // Next code will exit as soon as a client closes its write file descriptor
   fifo_fd = open(argv[1], O_RDONLY);
@@ -50,6 +49,6 @@ int main(int argc, char * argv[])
     write(out_fd, readbuf, num_bytes);
   }
   */
-
+ 
   return(0);
 }
