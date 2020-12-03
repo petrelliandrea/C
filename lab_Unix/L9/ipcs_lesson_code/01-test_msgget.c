@@ -14,7 +14,7 @@ int main() {
   //key_t key=0x000004d2;
   //key_t key=IPC_PRIVATE;
 
-  key_t key=ftok("/home/schi/examples.desktopaaaaa", 'x');
+  key_t key=ftok("/mnt/d/Andrea/Desktop/Repo_UNI/C/lab_Unix/L9/ipcs_lesson_code", 'x');
   if (key==-1) {
   //if (m_id=msgget(key, IPC_CREAT)<0) {
     fprintf(stderr, "%s: %d. Error in ftok #%03d: %s\n", __FILE__, __LINE__, errno, strerror(errno));

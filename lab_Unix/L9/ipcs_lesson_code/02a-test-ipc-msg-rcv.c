@@ -38,12 +38,12 @@ int main(int argc, char * argv[])
 
 	sa.sa_handler = signal_handler;
 	sa.sa_flags = 0;
-	sigemptyset(&my_mask);
+	sigemptyset(&my_mask); // svuota totalmente mymask (>elenca tutti i tuoi segnali<)
 	sa.sa_mask = my_mask;
-	sigaction(SIGALRM, &sa, NULL);
-	sigaction(SIGINT, &sa, NULL);
+	sigaction(SIGALRM, &sa, NULL); // Rimane in attesa di alarm 
+	sigaction(SIGINT, &sa, NULL); //  ================== di un Integer
 
-	alarm(5);
+	alarm(20);
 
 	rcv_type = atol(argv[1]);
 	while (1) {
