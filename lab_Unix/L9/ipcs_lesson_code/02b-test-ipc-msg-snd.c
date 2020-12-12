@@ -6,6 +6,8 @@
  * content of the message is read from stdin. If the length of the
  * content exceeds the buffer the message is truncated
  */
+
+
 int main(int argc, char * argv[])
 {
 	int q_id;
