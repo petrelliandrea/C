@@ -10,6 +10,8 @@
 #include <string.h>
 #include <signal.h>
 
+//Func to print queue status with useful informations
+void print_info_stats(int);
 
 #define TEST_ERROR    if (errno) {fprintf(stderr, \
 					  "%s:%d: PID=%5d: Error %d (%s)\n", \
